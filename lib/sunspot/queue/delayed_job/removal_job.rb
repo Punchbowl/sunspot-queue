@@ -9,5 +9,9 @@ module Sunspot::Queue::DelayedJob
         ::Sunspot.remove_by_id(klass, id)
       end
     end
+
+    def queue_name
+      Sunspot::Queue.configuration.queue_name
+    end
   end
 end

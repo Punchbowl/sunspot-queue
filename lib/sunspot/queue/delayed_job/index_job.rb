@@ -9,5 +9,9 @@ module Sunspot::Queue::DelayedJob
         constantize(klass).find(id).solr_index
       end
     end
+
+    def queue_name
+      Sunspot::Queue.configuration.queue_name
+    end
   end
 end
